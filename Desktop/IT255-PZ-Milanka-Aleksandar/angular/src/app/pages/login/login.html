@@ -1,0 +1,33 @@
+<!--
+<form role="form" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+  <div class="alert alert-danger" style="display: none;">
+
+  </div>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input id="username" type="text" class="form-control"  formControlName='username'>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input id="password" type="password" class="form-control" formControlName='password'>
+  </div>
+  <button type="submit" class="btn btn-default">Login</button>
+</form>
+-->
+<img class="img-responsive img-center" src="..\assets\img\logo.png" alt="">
+<img class="img-responsive img-center" src="..\assets\img\white.png" alt="">
+
+<section style="align-content: center">
+  <form role="form" [formGroup]="loginForma" (ngSubmit)="login(loginForma.value)">
+    <div class="alert alert-danger" style="display: none;"></div>
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input id="email" type="text" class="form-control" style="width: 300px" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="lozinka">Lozinka:</label>
+      <input id="lozinka" type="password" class="form-control" style="width: 300px" formControlName="lozinka">
+    </div>
+    <button type="submit" class="btn btn-default">Prijavljivanje</button>
+  </form>
+</section>

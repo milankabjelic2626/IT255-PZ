@@ -1,0 +1,68 @@
+  <section>
+
+    <div class="row" *ngFor=" let proizvod of products">
+        <ng-container *ngIf="proizvod.katID== id">
+        <div class="col-md-7"  >
+            <a href="#">
+                <img class="img-responsive" style="padding-left: 50px" src="{{proizvod.url}}" alt="">
+            </a>
+            <br/>
+        </div>
+    <br/>
+        <br/>
+        <hr>
+        <div class="col-md-5"  >
+            <h3 *ngIf="proizvod.akcija == 0">!!! AKCIJA!!!</h3>
+            <h3>{{proizvod.ime}}</h3>
+            <p>{{proizvod.opis}}</p>
+            <h3>{{proizvod.cena}}</h3>
+            <ng-container *ngIf="isAuth != null && !proizvod.isAdded" >
+                <a class="btn btn-danger"  (click)="proizvod.isAdded = !proizvod.isAdded; dodajUKorpu(proizvod.id)" >Dodaj u korpu <span class="glyphicon glyphicon-shopping-cart"></span></a>
+            </ng-container>
+            <ng-container *ngIf="isAuth != null && proizvod.isAdded">
+                <a class="btn btn-danger"  disabled >U korpi <span class="glyphicon glyphicon-shopping-cart"></span></a>
+            </ng-container>
+            <ng-container *ngIf="isAuth == null">
+
+            <a  class="btn btn-danger" [routerLink]="['/login']" >Dodaj u korpu <span class="glyphicon glyphicon-shopping-cart"></span></a>
+            </ng-container>
+
+        </div>
+<br/>
+        </ng-container>
+
+        <ng-container *ngIf="proizvod.akcija == id">
+            <div class="col-md-7" >
+                <a href="#">
+                    <img class="img-responsive" style="padding-left: 50px" src="{{proizvod.url}}" alt="">
+                </a>
+                <br/>
+            </div>
+            <br/>
+            <br/>
+            <hr>
+            <div class="col-md-5"  >
+                <h3>!!! AKCIJA!!!</h3>
+                <h3>{{proizvod.ime}}</h3>
+                <p>{{proizvod.opis}}</p>
+                <h3>{{proizvod.cena}}</h3>
+                <ng-container *ngIf="isAuth != null && !proizvod.isAdded" >
+                    <a class="btn btn-danger"  (click)="proizvod.isAdded = !proizvod.isAdded; dodajUKorpu(proizvod.id)" >Dodaj u korpu <span class="glyphicon glyphicon-shopping-cart"></span></a>
+                </ng-container>
+                <ng-container *ngIf="isAuth != null && proizvod.isAdded">
+                    <a class="btn btn-danger"  disabled >U korpi <span class="glyphicon glyphicon-shopping-cart"></span></a>
+                </ng-container>
+                <ng-container *ngIf="isAuth == null">
+
+                    <a  class="btn btn-danger" [routerLink]="['/login']" >Dodaj u korpu <span class="glyphicon glyphicon-shopping-cart"></span></a>
+                </ng-container>
+            </div>
+            <br/>
+        </ng-container>
+
+
+    </div>
+  </section>
+
+
+

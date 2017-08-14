@@ -1,0 +1,57 @@
+<aside class="image-bg-fixed-height"></aside>
+
+<img class="img-responsive img-center" src="..\assets\img\logo.png" alt="">
+
+<!--
+<form role="form" [formGroup]="registerForm" (ngSubmit)="onRegistracija(registerForm.value)">
+  <div class="alert alert-danger" style="display: none;">
+  </div>
+  <div class="form-group">
+    <label for="firstName">First name:</label>
+    <input id="firstName" type="text" class="form-control" formControlName='firstName'>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last name:</label>
+    <input id="lastName" type="text" class="form-control"  formControlName='lastName'>
+  </div>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input id="username" type="text" class="form-control"  formControlName='username'>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input id="pwd" type="password" class="form-control" formControlName='password'>
+  </div>
+  <button type="submit" class="btn btn-default">Register</button>
+</form>
+
+-->
+
+
+<section style="align-content: center">
+  <form role="form" [formGroup]="registracijaForm" (ngSubmit)="onRegistracija(registracijaForm.value)">
+    <div class="alert alert-danger" style="display: none;">
+    </div>
+    <div class="form-group">
+      <label for="ime">Ime:</label>
+      <input id="ime" type="text" class="form-control" formControlName='ime'>
+    </div>
+    <div class="form-group">
+      <label for="prezime">Prezime:</label>
+      <input id="prezime" type="text" class="form-control"  formControlName='prezime'>
+    </div>
+    <div class="form-group">
+      <label for="adresa">Adresa:</label>
+      <input id="adresa" type="text" class="form-control" formControlName='adresa'>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input id="email" type="text" class="form-control"  formControlName='email'>
+    </div>
+    <div class="form-group">
+      <label for="lozinka">Lozinka:</label>
+      <input id="lozinka" type="password" class="form-control" formControlName='lozinka'>
+    </div>
+    <button type="submit" class="btn btn-default">Registruj se</button>
+  </form>
+</section>

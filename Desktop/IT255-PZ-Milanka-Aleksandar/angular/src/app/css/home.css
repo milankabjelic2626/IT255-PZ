@@ -1,0 +1,57 @@
+/*
+ * Start Bootstrap - Full Width Pics (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.admin{
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+
+.img-responsive{
+    margin:auto;
+
+
+}
+.image-bg-fluid-height {
+    padding: 70px 0;
+}
+
+.image-bg-fixed-height {
+	background: url('http://mypropt.com/wp-content/uploads/2017/01/sportsperformance.jpg') no-repeat center center scroll;
+    height: 450px;
+}
+
+.img-center {
+	margin: 0 auto;
+
+}
+
+section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    margin: 30px 0;
+    font-size: 4em;
+}
+
+.section-lead {
+    margin: 30px 0;
+}
+
+.section-paragraph {
+    margin: 30px 0;
+}
+
+footer {
+    margin: 50px 0;
+}

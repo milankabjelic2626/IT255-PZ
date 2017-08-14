@@ -1,0 +1,73 @@
+
+    <div class="admin">
+        <div class="alert alert-danger" style="display: inline-block">
+
+            <h3>Admin Panel </h3>
+        </div>
+
+    <form role="form" [formGroup]="addProductForm" (ngSubmit)="addProduct(addProductForm.value)">
+    <div class="form-group">
+
+        <label for="ime">Ime:</label>
+        <input id="ime" type="text" class="form-control" formControlName='ime'>
+        <label for="katID">Kategorija:</label>
+        <select id="katID" type="text" class="form-control" formControlName='katID'>
+        <option value="1">Protein</option>
+        <option value="2">Kreatin</option>
+        <option value="3">Pre-workout</option>
+        <option value="4">Sagorevaci</option>
+        <option value="5">Aminokiseline</option>
+        </select>
+        <label for="opis">Opis:</label>
+        <input id="opis" type="text" class="form-control" formControlName='opis'>
+        <label for="cena">Cena:</label>
+        <input id="cena" type="text" class="form-control" formControlName='cena'>
+        <label for="url">URL Slike:</label>
+        <input id="url" type="text" class="form-control" formControlName='url'>
+        <label for="akcija">Na akciji:</label>
+        <select id="akcija" type="text" class="form-control" formControlName='akcija'>
+        <option value="0">DA</option>
+        <option value="10">NE</option>
+        </select>
+
+
+    </div>
+
+    <button type="submit" class="btn btn-success">Dodaj proizvod</button>
+</form>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    </div>
+
+    <div class="col-lg-12">
+        <table  class="display1" cellspacing="10" >
+            <thead>
+            <tr>
+
+                <th>ID: </th>
+                <th>Ime: </th>
+                <th>Opis: </th>
+                <th>Kategorija: </th>
+                <th>Cena: </th>
+                <th>Remove: </th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let proizvod of proizvodi">
+                <td >{{proizvod.id}}</td>
+                <td >{{proizvod.ime}}</td>
+                <td >{{proizvod.opis}}</td>
+                <td >{{proizvod.katID}}</td>
+                <td >{{proizvod.cena}}</td>
+                <td><button type="button" class="btn btn-danger" (click)="remove(proizvod.id)">
+                    <span class="glyphicon glyphicon-remove" > Ukloni</span>
+                    </button></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>

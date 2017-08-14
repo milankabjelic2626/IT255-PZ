@@ -1,0 +1,1 @@
+{"version":3,"file":"kontakt.component.js","sourceRoot":"","sources":["kontakt.component.ts"],"names":[],"mappings":";;;;;;;AAAA,sCAA0C;AAO1C,IAAqB,gBAAgB;IAArC;IAEA,CAAC;IAAD,uBAAC;AAAD,CAAC,AAFD,IAEC;AAFoB,gBAAgB;IALpC,gBAAS,CAAC;QACP,QAAQ,EAAE,SAAS;QACnB,WAAW,EAAE,gBAAgB;QAC7B,SAAS,EAAG,CAAC,uBAAuB,EAAC,2BAA2B,CAAC;KACpE,CAAC;GACmB,gBAAgB,CAEpC;;kBAFoB,gBAAgB"}

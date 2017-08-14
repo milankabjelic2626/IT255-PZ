@@ -1,0 +1,52 @@
+<nav class="navbar navbar-inverse navbar-static-top marginBottom-0" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['']">The SUPPLEMENT store</a>
+    </div>
+
+  <div class="collapse navbar-collapse" id="navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategorije<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a [routerLink]="['/proizvodi',1]">Protein</a></li>
+          <li><a [routerLink]="['/proizvodi',2]">Kreatin</a></li>
+          <li><a [routerLink]="['/proizvodi',3]">Pre-workout</a></li>
+          <li><a [routerLink]="['/proizvodi',4]">Sagorevaci</a></li>
+          <li><a [routerLink]="['/proizvodi',5]">Aminokiseline</a></li>
+        </ul>
+      </li>
+      <li><a [routerLink]="['/proizvodi',0]" style="font-weight: bold; color: #e00000">AKCIJA</a></li>
+      <li><a [routerLink]="['/prodavnice',1]">Prodavnice</a></li>
+      <li><a [routerLink]="['/prodavnice',2]">Fitnes centri</a></li>
+      <li><a [routerLink]="['/recepti']">Recepti</a></li>
+      <li><a [routerLink]="['/onama']">O nama</a></li>
+      <li><a [routerLink]="['/kontakt']">Kontakt</a></li>
+      <li  *ngIf="!isAuth" routerLink="/login" [routerLinkActiveOptions]="{ exact: true }"
+           routerLinkActive="active"><a [routerLink]="['/login']">Prijava</a></li>
+      <li  *ngIf="!isAuth" routerLink="/register" [routerLinkActiveOptions]="{ exact: true }"
+           routerLinkActive="active"><a [routerLink]="['/register']">Registracija</a></li>
+      <li  *ngIf="isAuth" routerLink="/korpa" [routerLinkActiveOptions]="{ exact: true }"
+           routerLinkActive="active"><a [routerLink]="['/korpa']"><img class="img-responsive img-center" src="..\assets\img\korpa.png" width="20" height="20" alt=""><span class="sr-only">(current)</span></a></li>
+        <ng-container *ngIf="isAuth">
+          <ng-container *ngIf="korisnik">
+      <li  *ngIf=" korisnik.role_id == 1" routerLink="/admin" [routerLinkActiveOptions]="{ exact: true }"
+           routerLinkActive="active"><a [routerLink]="['/admin']" >Admin</a></li>
+        </ng-container>
+        </ng-container>
+      <li  *ngIf="isAuth" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
+           routerLinkActive="active"><a [routerLink]="['/']" (click)="onLogout()">Odjava</a></li>
+
+    </ul>
+
+  </div><!-- /.navbar-collapse -->
+
+
+</nav>
+<router-outlet></router-outlet>
+
+
